@@ -1,13 +1,64 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Todos os Itens</title>
-    <script src="script.js"></script>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Catálogo de Filmes</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Mono:wght@300;400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    
+
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="logo">
+        <span class="logo-icon">▶</span>
+        <span class="logo-text">CineScope</span>
+      </div>
+      <nav class="filter-nav">
+        <button class="filter-btn active" data-filter="popular">Popular</button>
+        <button class="filter-btn" data-filter="top_rated">Mais Bem Avaliados</button>
+        <button class="filter-btn" data-filter="now_playing">Em Cartaz</button>
+        <button class="filter-btn" data-filter="upcoming">Em Breve</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main-content">
+
+    <section class="hero-search">
+      <h1 class="hero-title">
+        Descubra<br /><em>seu próximo</em><br />filme favorito.
+      </h1>
+      <div class="search-bar">
+        <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+        </svg>
+        <input id="search" type="text" placeholder="Buscar por título..." autocomplete="off" />
+        <button id="btnSearch">Buscar</button>
+      </div>
+    </section>
+
+    <section class="results-section">
+      <div class="results-header">
+        <span id="results-label" class="results-label">Filmes Populares</span>
+        <span id="results-count" class="results-count"></span>
+      </div>
+      <p id="message" class="message" aria-live="polite"></p>
+      <div id="movie-list" class="movie-list" aria-label="Lista de filmes"></div>
+    </section>
+
+  </main>
+
+  <div id="modal-overlay" class="modal-overlay" role="dialog" aria-modal="true" aria-label="Detalhes do filme">
+    <div class="modal-card">
+      <button class="modal-close" id="modal-close" aria-label="Fechar">✕</button>
+      <div id="modal-content" class="modal-content"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
