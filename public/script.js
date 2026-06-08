@@ -2,7 +2,7 @@
 
 
   
-const API_KEY        = "x";
+const API_KEY        = "8155e5a2070685610f1dadb680bae8bd";
 const BASE_URL       = "https://api.themoviedb.org/3";
 const IMG_BASE       = "https://image.tmdb.org/t/p/w500";
 const IMG_ORIGINAL   = "https://image.tmdb.org/t/p/original";
